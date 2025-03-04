@@ -17,8 +17,17 @@ Além disso, o script pode enviar automaticamente os registros capturados por e-
 3. Utiliza a biblioteca `pynput` para capturar as teclas digitadas.  
 4. Armazena cada tecla pressionada no log.  
 5. A cada 24 horas, um processo secundário envia o conteúdo do log por e-mail.  
-6. Após o envio do e-mail, o log é apagado e um novo é iniciado.  
+6. Após o envio do e-mail, o log é apagado e um novo é iniciado.
 
+Passos para Criar o Executável 💾
+
+Instale o PyInstaller
+```sh
+pip install pyinstaller
+```
+```sh
+pyinstaller --onefile --noconsole --hidden-import=pynput keylogger.py
+```
 ## 📌 Requisitos  
 - Python 3.x instalado  
 - Bibliotecas necessárias:  
@@ -27,6 +36,12 @@ Além disso, o script pode enviar automaticamente os registros capturados por e-
 
 📌 Melhorias Futuras
 🔒 Adicionar um e-mail criptografado: Implementar um sistema de criptografia para proteger as informações enviadas.
+
 🖼️ Captura de tela: Incluir um recurso para tirar screenshots periodicamente.
+
 🎤 Gravação de áudio: Implementar um módulo para capturar áudio do microfone.
+
 📁 Armazenamento alternativo: Permitir o envio dos logs para um servidor remoto ou salvar em um banco de dados.
+
+⚠️ Aviso
+Esse código é apenas para fins educacionais e testes de segurança ofensiva (pentest). Não use para fins ilegais.
